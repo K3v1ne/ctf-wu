@@ -17,3 +17,10 @@ Sử dụng một truy vấn UNION cơ bản
 ```
 Ta xác định dược rằng có 4 columns ở đây
 ## Tìm tên database và tables name bằng GROUP_CONCAT function
+Có thể tham khảo cheatsheet ở https://gist.github.com/nani1337/02c65b06d0dbcf3b9a684f5caf78ad15#file-0x01-basic-sqlinjection-cheat-sheet-L86
+
+```
+-1 UNION SELECT 1,2,database(),4 from information_schema.tables--
+```
+Ở đây ta có thể thấy database tên là **webeight**
+![](https://raw.githubusercontent.com/K3v1ne/ctf-wu/main/Inj3ction-Time/Capture.PNG)
