@@ -9,3 +9,11 @@ Name: Saranac
 Breed: Great Dane
 Color: Black
 ```
+
+Sử dụng một truy vấn UNION cơ bản
+
+```
+1 union select 1,2,3,4-- 
+```
+Ta xác định dược rằng có 4 columns ở đây
+## Tìm tên database và tables name bằng GROUP_CONCAT function
